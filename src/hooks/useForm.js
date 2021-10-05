@@ -12,5 +12,5 @@ export const useForm = (initialValues) => {
         alert('something');
     }
 
-    return [values, handleChanges, doSomething, renderAllInputs];
+    return [values, handleChanges, doSomething];
 }
