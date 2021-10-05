@@ -1,4 +1,5 @@
 import './App.css';
+import OtherForm from './components/OtherForm';
 import RandomForm from './components/RandomForm';
 
 function App() {
@@ -6,6 +7,8 @@ function App() {
   return (
     <div className="App">
       <RandomForm />
+      <br />
+      <OtherForm />
     </div>
   );
 }

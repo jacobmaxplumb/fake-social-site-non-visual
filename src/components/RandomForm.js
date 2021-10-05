@@ -1,10 +1,10 @@
 import { useState } from "react";
+import { useForm } from "../hooks/useForm";
+
+const initialValues = { firstName: '', lastName: '', email: '' };
 
 const RandomForm = (props) => {
-    const [values, setValues] = useState({ firstName: '', lastName: '', email: '' });
-    const handleChanges = (e) => {
-        setValues({ ...values, [e.target.name]: e.target.value })
-    }
+    const [values, handleChanges, third] = useForm(initialValues);
     return (
         <form>
             <input name="firstName" onChange={handleChanges} value={values.firstName} />
