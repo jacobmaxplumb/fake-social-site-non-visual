@@ -10,6 +10,9 @@ const initialValues = {
 
 function App() {
   const [values, setValues] = useState(initialValues)
+  const handleChanges = (e) => {
+    setValues({...values, [e.target.name]: e.target.value});
+  }
   return (
     <div className="App">
       <RandomForm />
@@ -17,8 +20,8 @@ function App() {
       <OtherForm />
       <br />
       <br />
-      <input value={values.randomOne} />
-      <input value={values.randomTwo} />
+      <input name="randomOne" onChange={handleChanges} value={values.randomOne} />
+      <input name="randomTwo" onChange={handleChanges} value={values.randomTwo} />
     </div>
   );
 }
